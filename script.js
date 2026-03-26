@@ -1,8 +1,17 @@
 const products = [
-    { id: 1, name: "Смартфон Blue X", price: 59900, img: "https://via.placeholder.com" },
-    { id: 2, name: "Наушники AirWave", price: 12500, img: "https://via.placeholder.com" },
-    { id: 3, name: "Часы SkyWatch", price: 21000, img: "https://via.placeholder.com" },
-    { id: 4, name: "Ноутбук Frost", price: 89000, img: "https://via.placeholder.com" },
+    { id: 1, name: "", price: 100, img: "" },
+    { id: 2, name: "", price: 100, img: "" },
+    { id: 3, name: "", price: 100, img: "" },
+    { id: 4, name: "", price: 100, img: "" },
+    { id: 5, name: "", price: 100, img: "" },
+    { id: 6, name: "", price: 100, img: "" },
+    { id: 7, name: "", price: 100, img: "" },
+    { id: 8, name: "", price: 100, img: "" },
+    { id: 9, name: "", price: 100, img: "" },
+    { id: 10, name: "", price: 100, img: "" },
+    { id: 11, name: "", price: 100, img: "" },
+    { id: 12, name: "", price: 100, img: "" },
+    { id: 13, name: "", price: 100, img: "" },
 ];
 
 const grid = document.getElementById('product-grid');
