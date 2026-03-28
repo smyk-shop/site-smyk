@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta charset="UTF-8">
-    <title>Marketplace</title>
+    <title>Mogy Pozvolit</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
@@ -15,15 +15,12 @@
             <input type="text" placeholder="Поиск товаров...">
         </div>
         <div class="nav-links">
-            <a href="#">Каталог</a>
-            <a href="#">Заказы</a>
             <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Smyk Shop</h1>
-        <button class="btn-main">Смотреть всё</button>
     </header>
 
     <main class="container">
@@ -32,5 +29,31 @@
     </main>
 
     <script src="script.js"></script>
+<div id="cart-modal" class="modal">
+   <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Оформление заказа</h2>
+    
+    <!-- Список товаров остается -->
+    <div id="cart-items-list"></div>
+    <div class="cart-total">Итого: <span id="total-price">0</span> ₽</div>
+
+    <hr>
+
+    <!-- Новая форма данных клиента -->
+   <div class="order-form">
+    <input type="text" id="user-name" placeholder="Ваше Имя" required>
+    <input type="tel" id="user-phone" placeholder="Номер телефона" required>
+    <input type="text" id="user-address" placeholder="Адрес доставки" required>
+    <!-- Изменили тип на text для гибкости -->
+    <input type="text" id="user-time" placeholder="Когда приехать? (например: 15 мая, 14:00)" required>
+</div>
+
+    <button class="btn-checkout" onclick="checkout()">Отправить заказ в Telegram</button>
+</div>
+
+</div>
+<div id="toast-container"></div>
+
 </body>
 </html>
