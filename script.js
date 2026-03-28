@@ -110,8 +110,8 @@ function saveCart() {
 }
 
 // 6. ОФОРМЛЕНИЕ ЗАКАЗА
-const TELEGRAM_BOT_TOKEN = '8587915362:AAFZrM0cnpUG32qDEWf7MYEVO98h98dfN98';
-const TELEGRAM_CHAT_ID = '1387608473';
+const BOT_TOKEN = CONFIG.TELEGRAM_BOT_TOKEN;
+const CHAT_ID = CONFIG.TELEGRAM_CHAT_ID;
 
 window.checkout = function() {
     // 1. Проверка корзины
@@ -154,14 +154,13 @@ window.checkout = function() {
     });
     message += `\n<b>💰 ИТОГО: ${total.toLocaleString()} ₽</b>`;
 
-    // 5. Отправка через Fetch
-    const url = `https://api.telegram.org{TELEGRAM_BOT_TOKEN}/sendMessage`;
-
+     const url = `https://api.telegram.org{BOT_TOKEN}/sendMessage`;
+    
     fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            chat_id: TELEGRAM_CHAT_ID,
+            chat_id: CHAT_ID,
             parse_mode: 'html',
             text: message
         })
